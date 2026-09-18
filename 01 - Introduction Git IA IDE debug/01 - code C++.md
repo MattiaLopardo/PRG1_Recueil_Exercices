@@ -2,16 +2,16 @@
 
 Dans le code ci-dessous, à quoi servent les différentes parties numérotées
 ~~~cpp
-#include <iostream>                         // 1
+#include <iostream>                         // 1 ajouter des libraries utiles à l'exécution du code grâce aux fonctions que l'on veut utiliser qui sont dans ces même librairies
 #include <cstdlib>
-using namespace std;                        // 2
+using namespace std;                        // 2 Permet de faire reconnaitre les fonctions comme cout sans leur préfixe qui est std::
 
-int main()                                  // 3
-{                                           // 4
-    cout << "Hello world"       << endl;    // 5
+int main()                                  // 3 appel la fonction de base qui est obligatoire au fonctionnement de l'exécutable soit la fonction main
+{                                           // 4 accolade qui déclare le début du bloc de code de la fonction main
+    cout << "Hello world"       << endl;    // 5 fonction cout qui permet d'afficher un message à l'écran, endl; qui permet de dire au programme que c'est la fin de la ligne.
     cout << "fin de programme"  << endl;
-    return EXIT_SUCCESS;                    // 6
-}                                           // 4
+    return EXIT_SUCCESS;                    // 6 permet de retourner un message à l'écran avec une valeur donnée, dans ce cas "EXIT_SUCCESS" qui vaut 0. cette valeur en fin de programme signifie que celui-ci s'est exécuter correctement sans erreur ou comportement innatendu
+}                                           // 4 Accolade qui ferme le bloc de code de la fonction main ce qui met fin au bloc 
 ~~~
 
 <details>
