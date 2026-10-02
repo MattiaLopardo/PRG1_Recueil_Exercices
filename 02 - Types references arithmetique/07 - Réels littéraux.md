@@ -4,14 +4,14 @@ Pour chacun des littéraux suivants, indiquez s'il est valide et, si oui, son ty
 
 | # | Littéral | Valide | Type | Affichage |
 |---|---|---|---|---|
-| 1 | `1.5` | | | |
-| 2 | `1E3` | | | |
-| 3 | `12.0u` | | | |
-| 4 | `1.0L` | | | |
-| 5 | `.5` | | | |
-| 6 | `5.` | | | |
-| 7 | `2.5f` | | | |
-| 8 | `3e-2` | | | |
+| 1 | `1.5` | | | | correct, double = 1.5
+| 2 | `1E3` | | | | correct, int = 1*10^3 = 1000
+| 3 | `12.0u` | | | | faux, car unsigned exite que pour les entier
+| 4 | `1.0L` | | | | correct, signed long double = 1.0
+| 5 | `.5` | | | | correct, signed double = 0.5
+| 6 | `5.` | | | | correct, signed double = 5.0
+| 7 | `2.5f` | | | | correct, signed float = 2.5
+| 8 | `3e-2` | | | | correct, signed double int = 3*10^-2 = 0.03
 
 <details>
 <summary>Solution</summary>

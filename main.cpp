@@ -2,21 +2,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <limits>
+#include <string>
+#include <cmath>
 
 using namespace std;
 
 int main() {
-
-    int gauche, droite;
-    cin >> gauche;
-    cin >> droite;
-
-    int somme = gauche + droite;
-
-    cout << "somme de " << gauche << " + " << droite << " = " << somme << endl;
-
-    bool correct = numeric_limits<int>::max - gauche < droite;
-    cout << " ce resultat est correct : " << boolalpha << correct << endl;
-
-    return EXIT_SUCCESS;
+    using type = int;
+    cout << "taille : " << sizeof(type) << " bytes = " << (numeric_limits<type>::digits + numeric_limits<type>::is_signed) << " bites" << endl;
+    cout << "plage de valeurs : " << numeric_limits<type>::lowest() << " <==> " << numeric_limits<type>::max() << endl;
+    cout << "signer : " << boolalpha << numeric_limits<type>::is_signed << endl;
 }

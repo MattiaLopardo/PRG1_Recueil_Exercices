@@ -9,38 +9,38 @@ Pour chaque séquence d'instructions suivante, déterminez si elle est correcte 
     int n = 1;
     n = 1 - 2 * n;
     n = n + 1;
-   ~~~
+   ~~~//correct, n = 0
 
 2.  
     ~~~cpp
     int n = 1;
     n = n + 1;
     int n = 1 - 2 * n;
-    ~~~
+    ~~~faux, double déclaration
 3. 
     ~~~cpp
     int n = 1, p = 2;
     n = (n + 1) * (n - k);
-    ~~~
+    ~~~ faux, k pas déclaré
 4. 
     ~~~cpp
     int n, m = 0;
     n = 2 * n - 1;
     m = n + 1;
-    ~~~
+    ~~~faux, n pas défini
  5. 
     ~~~cpp
     int n = 5, m = 0;
     const int nb_produit = 10;
     m = n * nb_produit - 1;    
-    ~~~
+    ~~~correct, m = 49
  6. 
     ~~~cpp
     int n = 5, m = 0;
     const int nb_produit = 10;
     nb_produit -= 1;
     m = n * nb_produit;
-    ~~~
+    ~~~faux, peu pas modifier une constante
 
 <details>
 <summary>Solution</summary>

@@ -4,14 +4,14 @@ Pour chacun des entiers littéraux suivants, indiquez son type et sa valeur.
 
 | # | Littéral | Type | Valeur |
 |---|---|---|---|
-| 1 | `12u` | | |
-| 2 | `1L` | | |
-| 3 | `255ULL` | | |
-| 4 | `1'000'000` | | |
-| 5 | `3ul` | | |
-| 6 | `42LL` | | |
-| 7 | `7U` | | |
-| 8 | `1'000'000'000'000LL` | | |
+| 1 | `12u` | | | unsigned int = 12
+| 2 | `1L` | | | signed long int = 1
+| 3 | `255ULL` | | | unsigned long long int = 255
+| 4 | `1'000'000` | | | signed int = 1'000'000
+| 5 | `3ul` | | | unsigned long int = 3
+| 6 | `42LL` | | | signed long long int = 42
+| 7 | `7U` | | | unsigned int = 7
+| 8 | `1'000'000'000'000LL` | | | signed long long int = 1'000'000'000'000
 
 <details>
 <summary>Solution</summary>
@@ -35,7 +35,7 @@ Que se passe-t-il à la compilation puis à l'exécution de la ligne suivante ?
 
 ~~~cpp
 int n = 1'000'000'000'000;
-~~~
+~~~ il y a dépassement et perte de la valeur de départ car ce nombre ne rentre pas dans la plage de valeurs d'un int de 4 bytes
 
 <details>
 <summary>Solution</summary>

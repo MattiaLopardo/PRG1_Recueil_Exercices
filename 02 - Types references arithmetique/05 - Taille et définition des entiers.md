@@ -35,7 +35,12 @@ Signé : true
 
 Testez votre programme avec les types `int`, `unsigned int`,
 `long`, `unsigned long long`, et `char`.
-
+int main() {
+using type = short int;
+cout << "taille : " << sizeof(type) << " bytes = " << (numeric_limits<type>::digits + numeric_limits<type>::is_signed) << " bites" << endl;
+cout << "plage de valeurs : " << numeric_limits<type>::lowest() << " <==> " << numeric_limits<type>::max() << endl;
+cout << "signer : " << boolalpha << numeric_limits<type>::is_signed << endl;
+}
 
 <details><summary>Solution</summary>
 

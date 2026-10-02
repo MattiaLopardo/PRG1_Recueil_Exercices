@@ -3,9 +3,10 @@
 Un `float` code sa mantisse sur 23 bits, plus un bit implicite : 24 chiffres binaires significatifs. `numeric_limits<float>::digits` vaut donc 24 (pour un type réel, `digits` est le nombre de bits de la mantisse, bit implicite compris).
 
 1. Quel est le plus petit entier positif qui n'est pas représentable exactement en `float` ? Raisonnez avec le nombre de chiffres significatifs, puis écrivez l'expression C++ qui le calcule à partir de `numeric_limits<float>::digits` et de `pow`.
-
+2^24+1
 2. Vérifiez avec le programme ci-dessous, puis expliquez pourquoi le test 2 affiche `true` alors que le test 3 affiche `false`.
-
+car, int est plus grand que float et vu que la précision est sur 10, les derniers chiffre sont indeterminable car ils viennent de la mémoir. 
+c'est les dernier chiffre stocké dans une certaine partie de la mémoir qui arrondisse la fin du nombre qui le rend !=n
 ~~~cpp
 int n = 16777217;
 cout << boolalpha << setprecision(10);
@@ -15,7 +16,7 @@ cout << "3) " << (static_cast<int>(static_cast<float>(n)) == n) << endl;
 ~~~
 
 3. Même question pour le type `double` (`numeric_limits<double>::digits` vaut 53) : quel est le plus petit entier positif non représentable, et dans quel type entier faut-il le stocker pour faire la vérification ?
-
+2^53+1
 <details>
 <summary>Solution</summary>
 

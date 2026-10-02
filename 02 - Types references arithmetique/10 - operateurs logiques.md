@@ -4,7 +4,9 @@ On suppose disposer de deux entiers x et y.
 Ecrire la condition permettant de tester :
 
 1.	que nos deux entiers valent 0
+x == 0 || y == 0
 2.	qu'au moins l'un de nos deux entiers vaut 0
+x == 0 
 3.	qu'un seul de nos deux entiers vaut 0
 4.	qu'au moins un de nos deux entiers ne vaut pas 0
 

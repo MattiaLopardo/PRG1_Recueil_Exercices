@@ -4,16 +4,16 @@ Pour chacune des déclarations ci-dessous, indiquez le type de base (`int`, `dou
 
 |  #  | Déclaration | Type |
 | --- | -------------- | --------- |
-| 1 | `??? var1 = 10;` | |
-| 2 | `??? var2 = 1.;`  | |
-| 3 | `??? var3 = '1';`  | |
-| 4 | `??? var4 = 0.5;` | |
-| 5 | `??? var5 = 'r';` | |
-| 6 | `??? var6 = true;` | |
-| 7 | `??? var7 = 25.0;` | |
-| 8 | `??? var8 = 3;` | |
-| 9 | `??? var9 = var1 / var8;` | |
-| 10 | `??? var10 = var1 / var4;` | |
+| 1 | `??? var1 = 10;` | | int signé
+| 2 | `??? var2 = 1.;`  | | double signé
+| 3 | `??? var3 = '1';`  | | char signé
+| 4 | `??? var4 = 0.5;` | | double signé
+| 5 | `??? var5 = 'r';` | | char signé
+| 6 | `??? var6 = true;` | | bool
+| 7 | `??? var7 = 25.0;` | | double signé
+| 8 | `??? var8 = 3;` | | int signé
+| 9 | `??? var9 = var1 / var8;` | | int signé
+| 10 | `??? var10 = var1 / var4;` | | double signé, conversion implicite du compilateur
 
 <details>
 <summary>Solution</summary>

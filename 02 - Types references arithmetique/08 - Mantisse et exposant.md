@@ -21,7 +21,22 @@ Entrez un nombre réel : 2023.09
 2023.09 = 2.02309 * 10^3
 2023.09 = 1.97567 * 2^10
 ~~~
+int main() {
+double nbr = .0;
+cout << " entrer un reel strictement positif : " << endl;
+cin >> nbr;
+cout << " nombre choisi = " << nbr << endl;
+const double exposant10 = static_cast<int>(floor(log10(nbr)));
+const double mantisse10 = nbr / pow(10, exposant10);
+cout << "la mantisse en base 10 : " << mantisse10 << endl;
 
+const double exposant2 = static_cast<int>(floor(log2(nbr)));
+const double mantisse2 = nbr / pow(2, exposant2);
+cout << "la mantisse en base 2 : " << mantisse2 << endl;
+
+cout << nbr << " = " << mantisse2 << " * " << 2 << "^" << exposant2 << endl;
+cout << nbr << " = " << mantisse10 << " * " << 10 << "^" << exposant10 << endl;
+}
 Question complémentaire : pourquoi la mantisse en base 2 est-elle toujours comprise entre 1 et 2 (exclu) ? Quel rapport avec le bit implicite du format IEEE 754 ?
 
 <details>
