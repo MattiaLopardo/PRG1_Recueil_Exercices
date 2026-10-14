@@ -8,6 +8,30 @@ Appliquer la fonction pour calculer le volume des 2 pyramides suivantes :
 
 Afficher les résultats avec un chiffre après la virgule.
 
+
+mon code :
+
+
+#include <cstdlib>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+double pyr(double a, double b, double c) {
+
+    return (a*b*c)/3;
+}
+
+int main() {
+
+    pyr(3.5, 10., 12.);
+
+    cout << fixed << setprecision(1) << "volume pyramide 1 : " << pyr(3.5, 10., 12.) << endl;
+    cout << fixed << setprecision(1) << "volume pyramide 2 : " <<  pyr(2.4, 3.6, 2.7) << endl;
+}
+
+
+
 <details>
 <summary>Solution</summary>
 

@@ -11,6 +11,31 @@ Pour ce faire, écrire une **fonction booléenne** *estBissextile* (donc, ne pas
 <details>
 <summary>Solution</summary>
 
+
+mon code :
+
+#include <cstdlib>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+bool estBissextile(int a) {
+return (a % 400 == 0) or (a % 4 == 0 and a % 100 != 0);
+
+}
+
+void afficher(int b) {
+cout << "l'annee choisie est bissextile : " << boolalpha << estBissextile(b);
+}
+
+int main() {
+int annee = 1;
+cout << "entrer l'annee a tester : " << endl;
+cin >> annee;
+afficher(annee);
+}
+
+
 ~~~cpp
 #include <cstdlib>
 #include <iostream>

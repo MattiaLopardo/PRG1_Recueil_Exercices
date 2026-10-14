@@ -20,6 +20,10 @@ int main() {
    return EXIT_SUCCESS;
 }
 ~~~
+/* A : n = 2
+B : n = 6
+C : n = 4
+*/
 
 <details>
 <summary>Solution</summary>

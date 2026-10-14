@@ -1,6 +1,9 @@
 # Que produit ce code
 
 Déterminer "à la main" ce que poduit ce code.
+x1 = (4 + 5)*4 + sqrt(4+5) = 36 + 3 = 39
+x2 = g(9) = 4*(9*9 + 19) = 400
+x3 = k (36 + 9) = k(45) = 92
 
 ~~~cpp
 #include <cmath>

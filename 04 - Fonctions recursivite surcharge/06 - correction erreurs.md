@@ -2,6 +2,16 @@
 Quelles modifications faut-il apporter au programme ci-dessous pour le rendre correct ?<br>
 **NB** Aucune ligne de code ne doit être ajoutée !
 
+Il faut déclarer les fonction f, g et h avant la fonction main pour qu'elles soient reconnu
+
+Il faut aussi spécifier le type de la variable j dans g()
+
+f doit avoir des parenthese
+
+h doit appeler ses variable en les séparant par une virgule
+
+même en appelant f il faut mettre des paranthese soit f()
+
 ~~~cpp
 #include <cstdlib>
 #include <iostream>
