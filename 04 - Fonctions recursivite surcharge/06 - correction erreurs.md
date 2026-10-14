@@ -10,7 +10,7 @@ f doit avoir des parenthese
 
 h doit appeler ses variable en les séparant par une virgule
 
-même en appelant f il faut mettre des paranthese soit f()
+même en appelant f il faut mettre des paranthese soit f().
 
 ~~~cpp
 #include <cstdlib>
