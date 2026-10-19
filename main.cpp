@@ -1,32 +1,74 @@
-// Exemples
-//
-// - listerCaracteres('A', 'A') => A
-// - listerCaracteres('A', 'C') => ABC
-// - listerCaracteres('B', 'A') =>
-// - listerCaracteres('0', '9') => 0123456789
-// - listerCaracteres(65, 67)   => ABC
-//
-// La fonction retourne un booléen indiquant si des caractères ont été affichés.
-
 #include <iostream>
 #include <cstdlib>
 
 using namespace std;
 
-char test(char a, char b) {
-    if (a > b) {cout << "a ne doit pas etre plus grand que b" << endl;return 0;}
-    else {
-        for (a; a <= b; ++a) {
-            cout << a;
-        } return 1;
+double addi(double a, double b, char op);
+double sous(double a, double b, char op);
+double mult(double a, double b, char op);
+double divi(double a, double b, char op);
+double resultat(double a, double b, char op);
+
+int main() {
+    double a = 0.;
+    double b = 0.;
+    char op = '+';
+
+    cout << "entrer le premier nombre : " << endl;
+    cin >> a;
+
+    cout << "entrer le deuxieme nombre : " << endl;
+    cin >> b;
+
+    do {
+        cout << "entrer l'operation a faire : [+,-,*,/]" << endl;
+        cin >> op;
+    }while (op != '+' and op != '-' and op != '*' and op != '/' );
+
+    cout << resultat(a,b,op) << endl;
+
+    //consigne 2
+    cout << resultat(a,b,'+') << endl;
+    cout << resultat(a,b,'-') << endl;
+    cout << resultat(a,b,'*') << endl;
+    cout << resultat(a,b,'/') << endl;
+
+
+}
+
+double resultat(double a, double b, char op) {
+    switch (op) {
+        case '+': return addi(a, b, '+'); break;
+        case '-': return sous(a, b, '+'); break;
+        case '*': return mult(a, b, '*'); break;
+        case '/': return divi(a, b, '/'); break;
     }
 }
-int main() {
-    char a = 0;
-    cout << "entrer a : " << endl;
-    cin >> a;
-    char b = 0;
-    cout << "entrer b : " << endl;
-    cin >> b;
-    test(a,b);
+
+double addi(double a, double b, char op) {
+    double c = 0.;
+    c = a + b;
+    //cout << a << " + " << b << " = " << c << endl;
+    return c;
+}
+
+double sous(double a, double b, char op) {
+    double c = 0.;
+    c = a - b;
+    //cout << a << " - " << b << " = " << c << endl;
+    return c;
+}
+
+double mult(double a, double b, char op) {
+    double c = 0.;
+    c = a * b;
+    //cout << a << " * " << b << " = " << c << endl;
+    return c;
+}
+
+double divi(double a, double b, char op) {
+    double c = 0.;
+    c = a / b;
+    //cout << a << " / " << b << " = " << c << endl;
+    return c;
 }

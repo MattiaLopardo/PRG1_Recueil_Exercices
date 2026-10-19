@@ -19,6 +19,61 @@ Vérifier le bon fonctionnement de la fonction en appliquant le scénario de tes
 - Deuxième retrait = 300
 - Afficher le montant du retrait effectif et le solde courant du compte
 
+
+mon code :
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+void transaction_bancaire(double& solde, double& montant);
+void afficher(double a, double b);
+
+int main() {
+double solde = 0.;
+double montant = 0.;
+
+    do {
+        cout << "entrez votre solde : " << endl;
+        cin >> solde;
+    }while (solde < 0);
+
+    char repeat = 'O';
+    
+    while (repeat == 'O'){
+        do {
+            cout << "entrez le montant a retirer : " << endl;
+            cin >> montant;
+        }while (montant < 0);
+
+        transaction_bancaire(solde, montant);
+        afficher(solde, montant);
+
+        do {
+            cout << "voulez vous recommencer ? [O/N]" << endl;
+            cin >> repeat;
+        }while (repeat !='O' and repeat !='N');
+    }
+}
+void transaction_bancaire(double& solde, double& montant) {
+if (solde == 0){cout << "votre solde est a 0" << endl;}
+else if (solde < montant) {
+montant = solde;
+solde = 0;
+}
+else {
+solde = solde - montant;
+}
+}
+
+    void afficher(double a, double b) {
+        cout << "vous avez retirer : " << b << endl;
+        cout << "votre solde est de : " << a << endl;
+    }
+
+
+
 <details>
 <summary>Solution</summary>
 

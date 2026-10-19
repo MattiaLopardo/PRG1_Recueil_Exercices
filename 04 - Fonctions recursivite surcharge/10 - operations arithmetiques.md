@@ -2,6 +2,86 @@
 Ecrire une fonction qui reçoit en paramètres d'entrée 2 nombres réels (de type double) et un caractère, et qui fournit en paramètre de sortie le résultat correspondant à l'une des 4 opérations appliquées à ses 2 premiers paramètres, en fonction de la valeur du troisième paramètre, à savoir : addition pour le caractère '+', soustraction pour '-', multiplication pour '*' et division pour '/'. Si l'un de ces 4 caractères est passé en argument, la fonction doit renvoyer true comme valeur (statut) de retour; dans le cas contraire, elle doit renvoyer false. Ne pas tenir compte des risques de division par zéro.
 
 Ecrire aussi un petit programme (main) utilisant cette fonction pour effectuer les 4 opérations sur les 2 nombres fournis en entrée par l'utilisateur. Ne pas tenir compte des éventuelles erreurs de saisie utilisateur.
+
+
+mon code :
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+double addi(double a, double b, char op);
+double sous(double a, double b, char op);
+double mult(double a, double b, char op);
+double divi(double a, double b, char op);
+double resultat(double a, double b, char op);
+
+int main() {
+double a = 0.;
+double b = 0.;
+char op = '+';
+
+    cout << "entrer le premier nombre : " << endl;
+    cin >> a;
+
+    cout << "entrer le deuxieme nombre : " << endl;
+    cin >> b;
+
+    do {
+        cout << "entrer l'operation a faire : [+,-,*,/]" << endl;
+        cin >> op;
+    }while (op != '+' and op != '-' and op != '*' and op != '/' );
+
+    cout << resultat(a,b,op) << endl;
+
+    //consigne 2
+    cout << resultat(a,b,'+') << endl;
+    cout << resultat(a,b,'-') << endl;
+    cout << resultat(a,b,'*') << endl;
+    cout << resultat(a,b,'/') << endl;
+
+
+}
+
+double resultat(double a, double b, char op) {
+switch (op) {
+case '+': return addi(a, b, '+'); break;
+case '-': return sous(a, b, '+'); break;
+case '*': return mult(a, b, '*'); break;
+case '/': return divi(a, b, '/'); break;
+}
+}
+
+double addi(double a, double b, char op) {
+double c = 0.;
+c = a + b;
+//cout << a << " + " << b << " = " << c << endl;
+return c;
+}
+
+double sous(double a, double b, char op) {
+double c = 0.;
+c = a - b;
+//cout << a << " - " << b << " = " << c << endl;
+return c;
+}
+
+double mult(double a, double b, char op) {
+double c = 0.;
+c = a * b;
+//cout << a << " * " << b << " = " << c << endl;
+return c;
+}
+
+double divi(double a, double b, char op) {
+double c = 0.;
+c = a / b;
+//cout << a << " / " << b << " = " << c << endl;
+return c;
+}
+
+
 <details>
 <summary>Solution</summary>
 
