@@ -2,6 +2,8 @@
 
 Les deux extraits de code suivants sont-ils équivalents ? Justifiez votre réponse.
 
+Non, car la condition de prixActuel == 100 est différente
+
 ~~~cpp 
 if (prixActuel > 100) {
    nouveauPrix = prixActuel - 20;

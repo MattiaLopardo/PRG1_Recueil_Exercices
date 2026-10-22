@@ -12,6 +12,19 @@ switch (a) {
 }
 ~~~
 
+    if (a == 0) {
+        cout << "A";
+    }
+    else if (a == 1) {
+        cout << "Z";
+    }
+    else if (a == 2) {
+        cout << "a";
+    }
+    else {
+        cout << "b";
+    }
+
 <details>
 <summary>Solution</summary>
 
@@ -27,6 +40,13 @@ if (a == 0) {
 }          
 ~~~
 </details>
+
+    if (a == 0) {
+        cout << "0D";
+    }
+    else {
+        cout << "D";
+    }
 
 ~~~cpp 
 switch (a) {
@@ -46,6 +66,19 @@ if (a == 0) {
 cout << "D";    
 ~~~
 </details>
+
+    if ( a >= 0 and a <= 5) {
+        cout << "A";
+    }
+    else if (a == 6) {
+        cout << "34";
+    }
+    else if (a == 7) {
+        cout << "4";
+    }
+    else {
+        cout << "D";
+    }
 
 ~~~cpp 
 switch (a) {

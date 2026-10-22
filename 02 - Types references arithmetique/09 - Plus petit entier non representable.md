@@ -5,8 +5,10 @@ Un `float` code sa mantisse sur 23 bits, plus un bit implicite : 24 chiffres bin
 1. Quel est le plus petit entier positif qui n'est pas représentable exactement en `float` ? Raisonnez avec le nombre de chiffres significatifs, puis écrivez l'expression C++ qui le calcule à partir de `numeric_limits<float>::digits` et de `pow`.
 2^24+1
 2. Vérifiez avec le programme ci-dessous, puis expliquez pourquoi le test 2 affiche `true` alors que le test 3 affiche `false`.
-car, int est plus grand que float et vu que la précision est sur 10, les derniers chiffre sont indeterminable car ils viennent de la mémoir. 
-c'est les dernier chiffre stocké dans une certaine partie de la mémoir qui arrondisse la fin du nombre qui le rend !=n
+
+3. car dans le second cout les deux valeurs sont comparée après la même conversion (float == float). dans le troisième cas, n est converti en float puis ensuite de nouveau en int, hors float gère ses 32bits 
+différement d'un int car il laisse de la place pour la mantisse et l'exposant d'un réel. donc float est sur 24 bits tandis que int sur 32bits pour chacun représenter un entier. float fait donc un arrondi 
+de la valeur converti. lorsque l'on reconverti le float en int, on compare l'arrondissemnt de la valeur avec la valeur de base.
 ~~~cpp
 int n = 16777217;
 cout << boolalpha << setprecision(10);

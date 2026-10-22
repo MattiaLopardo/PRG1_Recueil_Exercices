@@ -2,6 +2,7 @@
 
 Réécrivez les extraits de code suivants en n'utilisant ni `if` ni `switch` mais exclusivement des opérateurs de comparaisons et des opérateurs logiques.
 
+b = (i < 1) or (i > 2);
 ~~~cpp
 if (i < 1) {
    b = true;
@@ -9,14 +10,15 @@ if (i < 1) {
    b = i > 2;
 }
 ~~~
-
+b = (i<1) or (i>2);
 <details>
 <summary>Solution</summary>
 
 ~~~cpp
-b = (i < 1) or (i > 2);
+
 ~~~
 </details>
+b = ((j == 0) or (i/j >= k)) or (i/j < k);
 
 ~~~cpp
 if (j == 0) {

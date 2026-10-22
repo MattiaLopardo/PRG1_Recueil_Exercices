@@ -2,6 +2,8 @@
 
 Réécrivez les extraits de code suivants en une seule ligne en utilisant un ou des opérateurs ternaires 
 
+b = a > 0 ? a : -2*a; 
+
 ~~~cpp 
 if (a > 0) {
    b += a;
@@ -20,6 +22,8 @@ b = a > 0 ? b + a : b - 2*a;
 ~~~
 
 </details>
+
+r = d == 0. ? 1e100 : n/d;
 
 ~~~cpp 
 if (d == 0.) {
@@ -41,6 +45,8 @@ r = d ? n / d : 1e100;
 ~~~
 
 </details>
+
+b = a > 0 ? b + 1 : (b = a == 0 ? b = 0 : b *= 2);
 
 ~~~cpp 
 if (a > 0) {
